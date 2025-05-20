@@ -5,6 +5,11 @@ services:
       context: ./telegrambot
     container_name: telegrambot
     environment:
-      - TZ=America/Argentina/Buenos_Aires 
+      - SERVIDOR=${SERVIDOR}
       - TB_TOKEN=${TB_TOKEN}
       - TB_AUTORIZADOS=${TB_AUTORIZADOS}
+      - TZ=America/Argentina/Buenos_Aires 
+      - MQTT_PASS=${MQTT_PASS}
+      - MQTT_USR=${MQTT_USR}
+      - PUERTO_MQTTS=${PUERTO_MQTTS}
+      - TOPICO=${TOPICO}
